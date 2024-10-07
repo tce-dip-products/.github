@@ -1,0 +1,63 @@
+name: Defect
+description: Submit a new defect.
+title: "[Defect]: System Code | Company Code | Defect Short Description"
+labels: ["defect"]
+projects: ["tce-dip/2"]
+body:
+
+  - type: textarea
+    id: repro-steps
+    attributes:
+      label: Steps to Reproduce
+      value: |
+        1. Describe the steps
+        2. that lead to
+        3. reproducing the defect.
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: Provide an indication of the severity of this defect.
+      multiple: false
+      options:
+        - Trivial
+        - Minor
+        - Major
+        - Critical
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome-expected
+    attributes:
+      label: Expected Outcome
+      description: What is the expected outcome during normal operation?
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome-actual
+    attributes:
+      label: Actual Outcome
+      description: What is the observed outcome that is considered incorrect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: system-info
+    attributes:
+      label: System Info
+      description: Paste the relevant system information from the logs. This will be automatically formatted into code.
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: related-issues
+    attributes:
+      label: Related Issues
+      description: List any issues (requirements, defects) that may have caused or contributed to this defect.
+      placeholder: 1. tce-dip/tce-dip-connectors-template#30
+    validations:
+      required: false

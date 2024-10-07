@@ -1,0 +1,61 @@
+name: Requirement
+description: Submit a new requirement.
+title: "[Requirement]: System | CompanyCode | Short description of requirement"
+projects: ["tce-dip/2"]
+body:
+
+  - type: input
+    id: actor
+    attributes:
+      label: Actor (as a)
+      description: Who or what has a need for this specific requirement?
+      placeholder: "example: Financial Controller."
+    validations:
+      required: true
+
+  - type: input
+    id: objective
+    attributes:
+      label: Objective (I want to)
+      description: What is the overall goal of this specific requirement?
+      placeholder: "example: Add a chart with spending by category."
+    validations:
+      required: true
+
+  - type: input
+    id: value
+    attributes:
+      label: Value (so that)
+      description: Why does this requirement have value?
+      placeholder: "example: Saves one hour each month manually creating the chart."
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Describe the <b>context</b> or <b>background information</b> that will help to explain this requirement.
+  
+  - type: textarea
+    id: requirements-functional
+    attributes:
+      label: Functional Requirements (Acceptance criteria)
+      description: List the functional requirements and their MoSCoW classification.
+      value: |
+        - [ ] List any functional prerequisites, for example using a link: tce-dip/tce-dip-connectors-template#30.
+        - [ ] List the functional requirements (Acceptance criteria).
+    validations:
+      required: true
+
+  - type: textarea
+    id: requirements-non-functional
+    attributes:
+      label: Non-Functional Requirements (Acceptance criteria)
+      description: List the non-functional requirements and their MoSCoW classification.
+      value: |
+        - [ ] List any non-functional prerequisites, for example using a link: tce-dip/tce-dip-connectors-template#30.
+        - [ ] Readme and other documentation updated.
+        - [ ] Deployment scheduled or carried out.
+    validations:
+      required: true
