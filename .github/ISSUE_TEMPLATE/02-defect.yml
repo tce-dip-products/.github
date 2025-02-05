@@ -1,4 +1,5 @@
 name: Defect
+type: Defect
 description: Submit a new defect.
 title: "[Defect]: System Code | Company Code | Defect Short Description"
 labels: ["defect"]
