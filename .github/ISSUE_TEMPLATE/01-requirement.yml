@@ -1,4 +1,5 @@
 name: Requirement
+type: Requirement
 description: Submit a new requirement.
 title: "[Requirement]: System | CompanyCode | Short description of requirement"
 projects: ["tce-dip/2"]
