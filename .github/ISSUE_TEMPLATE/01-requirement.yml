@@ -10,7 +10,11 @@ body:
       value: "# Actor Guidance"
   - type: markdown
     attributes:
-      value: An actor specifies a role played by a user or any other system that interacts with the objective of this requirement. Actors are external to the requirement, but interact with it directly by providing input to it, and/or receive outputs from it. An actor is not necessarily a physical entity, for example, it may be a trigger or an event.
+      value: |
+        [!TIP]
+        An actor specifies a role played by a user or any other system that interacts with the objective of this requirement.
+        Actors are external to the requirement, but interact with it directly by providing input to it, and/or receive outputs from it.
+        An actor is not necessarily a physical entity, for example, it may be a trigger or an event.
     
   - type: input
     id: actor
