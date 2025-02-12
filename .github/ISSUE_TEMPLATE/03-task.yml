@@ -2,7 +2,7 @@ name: Task
 type: Task
 description: A specific task that should be executed which is not a requirement.
 title: "Short objective of the Task (do NOT add prefixes such as 'System | CODE' | ...)"
-projects: ["tce-dip/2"]
+projects: ["tce-dip/2","tce-dip-products/2"]
 body:
 
   - type: input

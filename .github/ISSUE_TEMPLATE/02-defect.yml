@@ -1,8 +1,8 @@
 name: Defect
 type: Defect
 description: Submit functionality that does not comply with one or more requirements.
-title: "[Defect]: System Code | Company Code | Defect Short Description"
-projects: ["tce-dip/2"]
+title: "Short objective of the defect (do NOT add prefixes such as 'System | CODE' | ...)"
+projects: ["tce-dip/2","tce-dip-products/2"]
 body:
 
   - type: textarea

@@ -2,7 +2,7 @@ name: Requirement
 type: Requirement
 description:  Submit a requirement that delivers value and can be implemented as a single unit.
 title: "Short objective of the requirement (do NOT add prefixes such as 'System | CODE' | ...)"
-projects: ["tce-dip/2"]
+projects: ["tce-dip/2","tce-dip-products/2"]
 body:
 
   - type: input
