@@ -9,7 +9,7 @@ body:
     id: actor
     attributes:
       label: Actor
-      description: "The <a href='https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#actor' target='_blank'>external person, system, or trigger</a> that provides input or receives the output of this requirement."
+      description: "The external person, system, or trigger that provides input or receives the output of this requirement."
       placeholder: "examples: KAM Manager | Financial Controller | System Notification | ServiceBus Message"
     validations:
       required: true
@@ -18,7 +18,7 @@ body:
     attributes:
       value: |
         > [!TIP]
-        > An <a href='https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#actor' target='_blank'>actor</a> specifies a role played by a _user_ or any other _system_ that interacts with the objective of this requirement.
+        > The actor specifies a role played by a _user_ or any other _system_ that interacts with the objective of this requirement.
         > Actors are _external_ to the requirement, but interact with it directly by _providing input_ to it, and/or _receive outputs_ from it.
         > An actor is not necessarily a physical entity, for example, it may be a _trigger_ or another type of _event_.
 
@@ -26,7 +26,7 @@ body:
     id: objective
     attributes:
       label: Objective
-      description: "The <a href='https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#objective' target='_blank'>overall objective</a> of this requirement in a single sentence."
+      description: "The overall objective of this requirement in a single sentence."
       placeholder: "example: The first tab in the report must display a chart that depicts spending by category."
     validations:
       required: true
@@ -48,7 +48,7 @@ body:
     id: context
     attributes:
       label: Context
-      description: Describe the [<b>context</b> and list any or <b>preconditions</b>](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#context) for the implementation of this requirement.
+      description: Describe the *context* and list any *preconditions* relevant to the implementation of this requirement.
 
   - type: markdown
     attributes:
@@ -62,7 +62,7 @@ body:
     id: requirements-functional
     attributes:
       label: Functional Requirements
-      description: List the <a href='https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#functional-requirements' target='_blank'>functional requirements</a> and their [<b>MoSCoW</b>](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#moscow) classification.
+      description: List the functional requirements and their *MoSCoW* classification.
       placeholder: |
         - [ ] List any functional prerequisites, for example using a link to another requirement.
         - [ ] List the functional requirements that <i>must, should, could, or would</i> be implemented.
@@ -83,7 +83,7 @@ body:
     id: requirements-non-functional
     attributes:
       label: Non-Functional Requirements
-      description: List the [non-functional requirements](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#non-functional-requirements) and their [<b>MoSCoW</b>](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#moscow) classification.
+      description: List the non-functional requirements and their *MoSCoW* classification.
       value: |
         - [ ] ...
         - [ ] The README file and other (code-) documentation sources _must_ be updated.
@@ -102,3 +102,10 @@ body:
         >     - Most non-functional requirements are _verifyable_ (can it be tested or confirmed?), but may not be.
         >     - Use the MoSCow classification to indicate priority, provide focus, or allow some interpretation.
         >     - This list is complemented by processes (Change and Release), standards (Coding Standards), and procedures (ISO).
+
+  - type: markdown
+    attributes:
+      value: |
+        
+        For more information about the process, see the [documentation](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/agile-process.html).
+        _(Note that this link opens in this window!)_
