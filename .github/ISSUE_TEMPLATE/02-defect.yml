@@ -1,6 +1,6 @@
 name: Defect
 type: Defect
-description: Submit a new defect.
+description: Submit functionality that does not comply with one or more requirements.
 title: "[Defect]: System Code | Company Code | Defect Short Description"
 labels: ["defect"]
 projects: ["tce-dip/2"]
