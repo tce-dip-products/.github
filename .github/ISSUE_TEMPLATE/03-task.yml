@@ -1,0 +1,44 @@
+name: Task
+type: Task
+description: A specific task that should be executed which is not a requirement.
+title: "Short objective of the Task (do NOT add prefixes such as 'System | CODE' | ...)"
+projects: ["tce-dip/2"]
+body:
+
+  - type: input
+    id: objective
+    attributes:
+      label: Objective
+      description: "The overall objective of this task in a single sentence."
+      placeholder: "example: Compare solution 1 to solution 2 in order to make an educated decision on their suitability."
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Provide an optional **context** relevant to the completion of this task.
+
+  - type: textarea
+    id: desired-outcome
+    attributes:
+      label: Desired Outcome
+      description: List the _desired outcomes_ and their **MoSCoW** classification.
+      placeholder: |
+        - [ ] List any prerequisites, for example using a link to another task.
+        - [ ] List the desired <i>must, should, could, or would</i> outcomes.
+    validations:
+      required: true
+
+  - type: textarea
+    id: completion-steps
+    attributes:
+      label: Completion Steps
+      description: List the steps required, in their preferred order, to complete this task.
+      placeholder: |
+        - [ ] Step 1 (optional @assignee)
+        - [ ] Step 2 (optional @assignee)
+        - [ ] Step 3 (optional @assignee)
+    validations:
+      required: true
