@@ -56,7 +56,7 @@ body:
         > [!TIP]
         > The context of the requirement provides background information:
         >     - Why is the requirement important or which particular need has resulted in this requirement,
-        >     - list any distinct _preconditions_, that is, the state that must exist before this requirement is triggered.
+        >     - List any distinct _preconditions_, that is, the state that must exist before this requirement is triggered.
         
   - type: textarea
     id: requirements-functional
@@ -136,3 +136,5 @@ body:
         > [!Note]
         > For more information about the process, see the [documentation](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/development/development-process.html).
         > _(Note that this link opens in this window so you may lose your changes!)_
+        >
+        > Additional tags, such as 'Product' and 'Company' can be added from the Project page after the requirement has been created.
