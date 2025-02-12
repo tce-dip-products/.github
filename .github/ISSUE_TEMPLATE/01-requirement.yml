@@ -119,8 +119,8 @@ body:
     attributes:
       value: |
         > [!TIP]
-        > The implementation plan defines the steps to be taken and should be part of the output of the refinement session(s).
-        > The steps to be taken should directly reflect the functional- and non-functional requirements. No more, no less.
+        > The implementation steps define the path to implementing the requirement and should be output of the refinement session(s).
+        > The steps should directly reflect the functional- and non-functional requirements. No more, no less.
 
   - type: markdown
     attributes:
@@ -133,6 +133,6 @@ body:
   - type: markdown
     attributes:
       value: |
-        
-        For more information about the process, see the [documentation](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/development/development-process.html).
-        _(Note that this link opens in this window so you may lose your changes!)_
+        > [!Note]
+        > For more information about the process, see the [documentation](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/development/development-process.html).
+        > _(Note that this link opens in this window so you may lose your changes!)_
