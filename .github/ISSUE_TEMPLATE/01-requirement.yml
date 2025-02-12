@@ -48,7 +48,7 @@ body:
     id: context
     attributes:
       label: Context
-      description: Describe the *context* and list any *preconditions* relevant to the implementation of this requirement.
+      description: Describe the **context** and list any **preconditions** relevant to the implementation of this requirement.
 
   - type: markdown
     attributes:
@@ -62,7 +62,7 @@ body:
     id: requirements-functional
     attributes:
       label: Functional Requirements
-      description: List the functional requirements and their *MoSCoW* classification.
+      description: List the _functional_ requirements and their **MoSCoW** classification.
       placeholder: |
         - [ ] List any functional prerequisites, for example using a link to another requirement.
         - [ ] List the functional requirements that <i>must, should, could, or would</i> be implemented.
@@ -83,7 +83,7 @@ body:
     id: requirements-non-functional
     attributes:
       label: Non-Functional Requirements
-      description: List the non-functional requirements and their *MoSCoW* classification.
+      description: List the _non-functional_ requirements and their **MoSCoW** classification.
       value: |
         - [ ] ...
         - [ ] The README file and other (code-) documentation sources _must_ be updated.
@@ -107,5 +107,5 @@ body:
     attributes:
       value: |
         
-        For more information about the process, see the [documentation](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/agile-process.html).
-        _(Note that this link opens in this window!)_
+        For more information about the process, see the [documentation](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/development/development-process.html).
+        _(Note that this link opens in this window so you may lose your changes!)_
