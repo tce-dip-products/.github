@@ -1,7 +1,7 @@
 name: Requirement
 type: Requirement
 description: Submit a new requirement.
-title: "Short objective of the requirement"
+title: "Short objective of the requirement (do NOT add prefixes such as 'System | CODE' | ...)"
 projects: ["tce-dip/2"]
 body:
 
@@ -48,7 +48,7 @@ body:
     id: context
     attributes:
       label: Context
-      description: Describe the **context** and list any **preconditions** relevant to the implementation of this requirement.
+      description: Provide an optional **context** and list any **preconditions** relevant to the implementation of this requirement.
 
   - type: markdown
     attributes:
