@@ -22,7 +22,7 @@ body:
         > Actors are _external_ to the requirement, but interact with it directly by _providing input_ to it, and/or _receive outputs_ from it.
         > An actor is not necessarily a physical entity, for example, it may be a _trigger_ or another type of _event_.
 
-  - type: textarea
+  - type: input
     id: objective
     attributes:
       label: Objective
