@@ -4,17 +4,6 @@ description: Submit a new requirement.
 title: "Short objective of the requirement"
 projects: ["tce-dip/2"]
 body:
-
-  - type: markdown
-    attributes:
-      value: "# Actor Guidance"
-  - type: markdown
-    attributes:
-      value: |
-        > [!TIP]
-        > An actor specifies a role played by a user or any other system that interacts with the objective of this requirement.
-        > Actors are external to the requirement, but interact with it directly by providing input to it, and/or receive outputs from it.
-        > An actor is not necessarily a physical entity, for example, it may be a trigger or an event.
     
   - type: input
     id: actor
@@ -27,11 +16,11 @@ body:
 
   - type: markdown
     attributes:
-      value: "# Objective Guidance"
-  - type: markdown
-    attributes:
       value: |
-        "A single, complete and unambiguous sentence that describes the desired end-state of this requirement. It includes a subject and a predicate with an object."
+        > [!TIP]
+        > An actor specifies a role played by a _user_ or any other _system_ that interacts with the objective of this requirement.
+        > Actors are _external_ to the requirement, but interact with it directly by _providing input_ to it, and/or _receive outputs_ from it.
+        > An actor is not necessarily a physical entity, for example, it may be a _trigger_ or another type of _event_.
 
   - type: textarea
     id: objective
@@ -42,6 +31,18 @@ body:
     validations:
       required: true
 
+  - type: markdown
+    attributes:
+      value: |
+        > [!TIP]
+        > The objective is a _single_, _complete_ and _unambiguous_ sentence that describes the desired _end-state_ of this requirement.
+        > It includes a subject and a predicate with an object. Keep the following in mind when composing the objective:
+        > - Is it a complete and unambiguous sentence?
+        > - Is it not in conflict with any other requirements?
+        > - Is it an atomic (single unit) of work?
+        > - Is it feasible within a single iteration?
+        > - It it valuable?
+        
   - type: textarea
     id: context
     attributes:
