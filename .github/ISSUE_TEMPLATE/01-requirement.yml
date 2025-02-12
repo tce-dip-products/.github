@@ -1,34 +1,49 @@
 name: Requirement
 type: Requirement
 description: Submit a new requirement.
-title: "[Requirement]: System | CompanyCode | Short description of requirement"
+title: "Short objective of the requirement"
 projects: ["tce-dip/2"]
 body:
 
+  - type: markdown
+    attributes:
+      value: "# Actor Guidance"
+  - type: markdown
+    attributes:
+      value: |
+      "An actor specifies a role played by a user or any other system that interacts with the objective of this requirement."
+      "Actors are external to the requirement, but interact with it directly by providing input to it, and/or receive outputs from it."
+      "An actor is not necessarily a physical entity, for example, it may be a trigger or an event."
+    
   - type: input
     id: actor
     attributes:
-      label: Actor (as a)
-      description: Who or what has a need for this specific requirement?
-      placeholder: "example: Financial Controller."
+      label: Actor
+      description: "The [external person, system, or trigger](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#actor) that provides input or receives the output of this requirement."
+      placeholder: "examples: KAM Manager | Financial Controller | System Notification | ServiceBus Message"
     validations:
       required: true
 
-  - type: input
+  - type: markdown
+    attributes:
+      value: "# Objective Guidance"
+  - type: markdown
+    attributes:
+      value: |
+      "A single, complete and unambiguous sentence that describes the desired end-state of this requirement. It includes a subject and a predicate with an object."
+      "Keep the following in mind when composing the objective:"
+      "- Is it a complete and unambiguous sentence?"
+      "- Is it not in conflict with any other requirements?"
+      "- Is it an atomic (single unit) of work?"
+      "- Is it feasible within a single iteration?"
+      "- It it valuable?"
+      
+  - type: textarea
     id: objective
     attributes:
-      label: Objective (I want to)
-      description: What is the overall goal of this specific requirement?
-      placeholder: "example: Add a chart with spending by category."
-    validations:
-      required: true
-
-  - type: input
-    id: value
-    attributes:
-      label: Value (so that)
-      description: Why does this requirement have value?
-      placeholder: "example: Saves one hour each month manually creating the chart."
+      label: Objective
+      description: The [overall objective](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#objective) of this requirement in a single sentence?
+      placeholder: "example: The first tab in the report must display a chart that depicts spending by category."
     validations:
       required: true
 
@@ -36,24 +51,32 @@ body:
     id: context
     attributes:
       label: Context
-      description: Describe the <b>context</b> or <b>background information</b> that will help to explain this requirement.
-  
+      description: Describe the [<b>context</b>, add <b>background information</b>, and list any <b>preconditions</b>](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#context) that are important for the implementation of this requirement.
+
+  - type: markdown
+    attributes:
+      value: "# Requirements Guidance"
+  - type: markdown
+    attributes:
+      value: "The functional en non-functional requirements form the core of this requirement"
+    
   - type: textarea
     id: requirements-functional
     attributes:
-      label: Functional Requirements (Acceptance criteria)
-      description: List the functional requirements and their MoSCoW classification.
-      value: |
+      label: Functional Requirements
+      description: List the [functional requirements](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#functional-requirements) and their [<b>MoSCoW</b>](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#moscow) classification.
+      placeholder: |
         - [ ] List any functional prerequisites, for example using a link: tce-dip/tce-dip-connectors-template#30.
-        - [ ] List the functional requirements (Acceptance criteria).
+        - [ ] List the functional requirements that <i>must / should / could / would</i> be implemented.
+        - [ ] List the functional requirements that <i>must / should / could / would</i> be implemented.
     validations:
       required: true
 
   - type: textarea
     id: requirements-non-functional
     attributes:
-      label: Non-Functional Requirements (Acceptance criteria)
-      description: List the non-functional requirements and their MoSCoW classification.
+      label: Non-Functional Requirements
+      description: List the [non-functional requirements](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#non-functional-requirements) and their [<b>MoSCoW</b>](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#moscow) classification.
       value: |
         - [ ] List any non-functional prerequisites, for example using a link: tce-dip/tce-dip-connectors-template#30.
         - [ ] Readme and other documentation updated.
