@@ -37,11 +37,11 @@ body:
         > [!TIP]
         > The objective is a _single_, _complete_ and _unambiguous_ sentence that describes the desired _end-state_ of this requirement.
         > It includes a subject and a predicate with an object. Keep the following in mind when composing the objective:
-        > - Is it a complete and unambiguous sentence?
-        > - Is it not in conflict with any other requirements?
-        > - Is it an atomic (single unit) of work?
-        > - Is it feasible within a single iteration?
-        > - It it valuable?
+        >     - Is it a complete and unambiguous sentence?
+        >     - Is it not in conflict with any other requirements?
+        >     - Is it an atomic (single unit) of work?
+        >     - Is it feasible within a single iteration?
+        >     - It it valuable?
         
   - type: textarea
     id: context
