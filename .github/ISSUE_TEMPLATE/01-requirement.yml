@@ -103,6 +103,33 @@ body:
         >     - Use the MoSCow classification to indicate priority, provide focus, or allow some interpretation.
         >     - This list is complemented by processes (Change and Release), standards (Coding Standards), and procedures (ISO).
 
+  - type: textarea
+    id: implementation-steps
+    attributes:
+      label: Implementation Steps
+      description: List the steps required, in their preferred order, to implement this requirement.
+      placeholder: |
+        - [ ] Step 1 (optional @assignee)
+        - [ ] Step 2 (optional @assignee)
+        - [ ] Step 3 (optional @assignee)
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        > [!TIP]
+        > The implementation plan defines the steps to be taken and should be part of the output of the refinement session(s).
+        > The steps to be taken should directly reflect the functional- and non-functional requirements. No more, no less.
+
+  - type: markdown
+    attributes:
+      value: |
+        > [!Warning]
+        > You may be tempted to create sub-issues 'Task', but try to resist this:
+        > 1. You probably need a prerequisite requirement.
+        > 2. A 'Task' issue type comes with quality demands!
+
   - type: markdown
     attributes:
       value: |
