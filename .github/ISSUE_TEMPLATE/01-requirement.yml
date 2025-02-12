@@ -10,7 +10,7 @@ body:
     attributes:
       label: Actor
       description: The <a href="https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#actor" target="blank">external person, system, or trigger</a> that provides input or receives the output of this requirement.
-      placeholder: examples: KAM Manager / Financial Controller / System Notification / ServiceBus Message
+      placeholder: "examples: KAM Manager | Financial Controller | System Notification | ServiceBus Message"
     validations:
       required: true
 
