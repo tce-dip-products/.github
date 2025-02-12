@@ -27,7 +27,7 @@ body:
   - type: markdown
     attributes:
       value: |
-      A single, complete and unambiguous sentence that describes the desired end-state of this requirement. It includes a subject and a predicate with an object."
+        "A single, complete and unambiguous sentence that describes the desired end-state of this requirement. It includes a subject and a predicate with an object."
 
   - type: textarea
     id: objective
