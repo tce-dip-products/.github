@@ -4,12 +4,12 @@ description: Submit a new requirement.
 title: "Short objective of the requirement"
 projects: ["tce-dip/2"]
 body:
-    
+
   - type: input
     id: actor
     attributes:
       label: Actor
-      description: The <a href="https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#actor" target="_blank">external person, system, or trigger</a> that provides input or receives the output of this requirement.
+      description: "The <a href='https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#actor' target='_blank'>external person, system, or trigger</a> that provides input or receives the output of this requirement."
       placeholder: "examples: KAM Manager | Financial Controller | System Notification | ServiceBus Message"
     validations:
       required: true
@@ -26,7 +26,7 @@ body:
     id: objective
     attributes:
       label: Objective
-      description: The [overall objective](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#objective) of this requirement in a single sentence?
+      description: "The <a href='https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#objective' target='_blank'>overall objective</a> of this requirement in a single sentence."
       placeholder: "example: The first tab in the report must display a chart that depicts spending by category."
     validations:
       required: true
@@ -41,32 +41,43 @@ body:
         >     - Is it not in conflict with any other requirements?
         >     - Is it an atomic (single unit) of work?
         >     - Is it feasible within a single iteration?
+        >     - Is it verifyable (can it be tested)?
         >     - It it valuable?
         
   - type: textarea
     id: context
     attributes:
       label: Context
-      description: Describe the [<b>context</b>, add <b>background information</b>, and list any <b>preconditions</b>](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#context) that are important for the implementation of this requirement.
+      description: Describe the [<b>context</b> and list any or <b>preconditions</b>](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#context) for the implementation of this requirement.
 
   - type: markdown
     attributes:
-      value: "# Requirements Guidance"
-  - type: markdown
-    attributes:
-      value: "The functional en non-functional requirements form the core of this requirement"
-    
+      value: |
+        > [!TIP]
+        > The context of the requirement provides background information:
+        >     - Why is the requirement important or which particular need has resulted in this requirement,
+        >     - list any distinct _preconditions_, that is, the state that must exist before this requirement is triggered.
+        
   - type: textarea
     id: requirements-functional
     attributes:
       label: Functional Requirements
-      description: List the [functional requirements](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#functional-requirements) and their [<b>MoSCoW</b>](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#moscow) classification.
+      description: List the <a href='https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#functional-requirements' target='_blank'>functional requirements</a> and their [<b>MoSCoW</b>](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#moscow) classification.
       placeholder: |
-        - [ ] List any functional prerequisites, for example using a link: tce-dip/tce-dip-connectors-template#30.
-        - [ ] List the functional requirements that <i>must / should / could / would</i> be implemented.
-        - [ ] List the functional requirements that <i>must / should / could / would</i> be implemented.
+        - [ ] List any functional prerequisites, for example using a link to another requirement.
+        - [ ] List the functional requirements that <i>must, should, could, or would</i> be implemented.
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        > [!TIP]
+        > The functional requirements (FR's) comprise everything that is expected for this requirement to _function_ properly:
+        >     - List the _exact_ and _detailed_ expectations of the functional implementation of this requirement.
+        >     - All functional requirements must be _verifyable_ (can it be tested or confirmed?).
+        >     - Use the MoSCow classification to indicate priority, provide focus, or allow some interpretation.
+        >     - Anything not listed here is _not_ considered part of this requirement and _should_ not be implemented. 
 
   - type: textarea
     id: requirements-non-functional
@@ -74,8 +85,20 @@ body:
       label: Non-Functional Requirements
       description: List the [non-functional requirements](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#non-functional-requirements) and their [<b>MoSCoW</b>](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#moscow) classification.
       value: |
-        - [ ] List any non-functional prerequisites, for example using a link: tce-dip/tce-dip-connectors-template#30.
-        - [ ] Readme and other documentation updated.
-        - [ ] Deployment scheduled or carried out.
+        - [ ] ...
+        - [ ] The README file and other (code-) documentation sources _must_ be updated.
+        - [ ] All (unit-) tests _must_ pass and failures _should_ be documented as defects or requirements.
+        - [ ] All related [Pull Requests](../pulls) _must_ be reviewed, approved, and merged.
+        - [ ] The (production-) deployment _should_ be scheduled.
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        > [!TIP]
+        > The non-functional requirements (NFR's) comprise all expectations which do _not_ contribute to this requirement _functioning_ properly:
+        >     - List the _exact_ and _detailed_ expectations of the non-functional implementation of this requirement.
+        >     - Most non-functional requirements are _verifyable_ (can it be tested or confirmed?), but may not be.
+        >     - Use the MoSCow classification to indicate priority, provide focus, or allow some interpretation.
+        >     - This list is complemented by processes (Change and Release), standards (Coding Standards), and procedures (ISO).
