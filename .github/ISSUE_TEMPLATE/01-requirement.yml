@@ -11,9 +11,9 @@ body:
   - type: markdown
     attributes:
       value: |
-      "An actor specifies a role played by a user or any other system that interacts with the objective of this requirement."
-      "Actors are external to the requirement, but interact with it directly by providing input to it, and/or receive outputs from it."
-      "An actor is not necessarily a physical entity, for example, it may be a trigger or an event."
+      An actor specifies a role played by a user or any other system that interacts with the objective of this requirement.
+      Actors are external to the requirement, but interact with it directly by providing input to it, and/or receive outputs from it.
+      An actor is not necessarily a physical entity, for example, it may be a trigger or an event.
     
   - type: input
     id: actor
@@ -30,13 +30,13 @@ body:
   - type: markdown
     attributes:
       value: |
-      "A single, complete and unambiguous sentence that describes the desired end-state of this requirement. It includes a subject and a predicate with an object."
-      "Keep the following in mind when composing the objective:"
-      "- Is it a complete and unambiguous sentence?"
-      "- Is it not in conflict with any other requirements?"
-      "- Is it an atomic (single unit) of work?"
-      "- Is it feasible within a single iteration?"
-      "- It it valuable?"
+      A single, complete and unambiguous sentence that describes the desired end-state of this requirement. It includes a subject and a predicate with an object."
+      Keep the following in mind when composing the objective
+      - Is it a complete and unambiguous sentence?
+      - Is it not in conflict with any other requirements?
+      - Is it an atomic (single unit) of work?
+      - Is it feasible within a single iteration?
+      - It it valuable?
       
   - type: textarea
     id: objective
