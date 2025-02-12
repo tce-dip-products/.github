@@ -18,7 +18,7 @@ body:
     attributes:
       value: |
         > [!TIP]
-        > An actor specifies a role played by a _user_ or any other _system_ that interacts with the objective of this requirement.
+        > An <a href='https://fuzzy-goggles-j8o2698.pages.github.io/documentation/process/development-proccess.html#actor' target='_blank'>actor</a> specifies a role played by a _user_ or any other _system_ that interacts with the objective of this requirement.
         > Actors are _external_ to the requirement, but interact with it directly by _providing input_ to it, and/or _receive outputs_ from it.
         > An actor is not necessarily a physical entity, for example, it may be a _trigger_ or another type of _event_.
 
