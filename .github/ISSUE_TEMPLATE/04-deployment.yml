@@ -1,6 +1,6 @@
 name: Deployment
 type: deployment
-description: A product deployment to an upstream environment.
+description: A product deployment to an downstream environment.
 title: "Deploy <Product Name> [v1.x.x] to <TST|ACC|PRD>"
 projects: ["tce-dip/2","tce-dip-products/2"]
 body:
