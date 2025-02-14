@@ -1,18 +1,9 @@
 name: Defect
-description: Submit a new defect.
-title: "[Defect]: System Code | Company Code | Defect Short Description"
-labels: ["defect"]
-projects: ["tce-dip/2"]
+type: defect
+description: "Submit functionality that does not comply with one or more requirements."
+title: "Description of the defect (do NOT add prefixes such as 'System | CODE' | ...)"
+projects: ["tce-dip/2","tce-dip-products/2"]
 body:
-
-  - type: textarea
-    id: repro-steps
-    attributes:
-      label: Steps to Reproduce
-      value: |
-        1. Describe the steps
-        2. that lead to
-        3. reproducing the defect.
 
   - type: dropdown
     id: severity
@@ -27,6 +18,60 @@ body:
         - Critical
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        > [!TIP]
+        > The Severity is the impact that this defect has on the operation of a component or system.
+        >     - Trivial: a defect that does not cause significant issues in the functionality of the system.
+        >     - Minor: a defect that causes issues in less important functionality of the system. Workarounds may exist.
+        >     - Major: a defect that causes issues in crucial functionality. Workarounds may exist but are not ideal.
+        >     - Critical: a defect that causes a failure in crucial functionality. There may not be any workarounds.
+
+  - type: dropdown
+    id: prevalence
+    attributes:
+      label: Prevalence
+      description: Provide an indication of how often this defect occurs.
+      multiple: false
+      options:
+        - Unknown
+        - Occasionally
+        - Frequently
+        - Continuously
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        > [!TIP]
+        > The Prevalence is a measure of how frequently a defect can be observed.
+        >     - Unknown: this may be the first time this defect has been observed.
+        >     - Occasionally: this defect has been observed several times at irregular intervals. Recurrence is unpredictable.
+        >     - Frequently: this defect can be observed at frequent or regular intervals. Recurrence is practically guaranteed.
+        >     - Continuously: this defect can be observed at very frequent intervals or continuously. Recurrence is guaranteed.
+
+  - type: textarea
+    id: repro-steps
+    attributes:
+      label: Steps to Reproduce
+      placeholder: |
+        1. Describe the steps that lead to
+        2. reproducing or observing the defect.
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        > [!TIP]
+        > The steps to reproduce are critical for finding the cause of the defect:
+        >     - An attempt should always be made to reproduce the defect in a non-production environment.
+        >     - List the _exact_ and _detailed_ steps or activities that lead to this defect, and/or:
+        >     - If the steps are still unknown, list the _exact_ observations, for example the log entry details.
+        >     - When using a link to the logs, keep in mind that logs expire.
 
   - type: textarea
     id: outcome-expected
@@ -49,7 +94,11 @@ body:
     attributes:
       label: System Info
       description: Paste the relevant system information from the logs. This will be automatically formatted into code.
-      render: shell
+      render: json
+      placeholder: |
+        "{"
+        "    ..."
+        "}"
     validations:
       required: true
 
@@ -57,7 +106,7 @@ body:
     id: related-issues
     attributes:
       label: Related Issues
-      description: List any issues (requirements, defects) that may have caused or contributed to this defect.
+      description: List any issues (requirements, defects, tasks) that may have caused or contributed to this defect.
       placeholder: 1. tce-dip/tce-dip-connectors-template#30
     validations:
       required: false

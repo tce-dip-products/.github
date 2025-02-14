@@ -1,61 +1,135 @@
 name: Requirement
-description: Submit a new requirement.
-title: "[Requirement]: System | CompanyCode | Short description of requirement"
-projects: ["tce-dip/2"]
+type: requirement
+description: "Submit a requirement that delivers value and can be implemented as a single unit."
+title: "Objective of the requirement (do NOT add prefixes such as 'System | CODE' | ...)"
+projects: ["tce-dip/2","tce-dip-products/2"]
 body:
+
+  - type: markdown
+    attributes:
+      value: |
+        > [!TIP]
+        > The title must be a _single_, _complete_ and _unambiguous_ objective that describes the desired _end-state_ of this requirement.
+        > It includes a subject and a predicate with an object.
+        >
+        > Examples:
+        >    - _Display a chart depicting spending by category in first tab_
+        >    - _Load available entities in HR data product source layer_
+        >
+        > Keep the following in mind when composing the objective:
+        >    - Is it a complete and unambiguous sentence?
+        >    - Is it not in conflict with any other requirements?
+        >    - Is it an atomic (single unit) of work?
+        >    - Is it feasible within a single iteration?
+        >    - Is it verifyable (can it be tested)?
+        >    - It it valuable?
 
   - type: input
     id: actor
     attributes:
-      label: Actor (as a)
-      description: Who or what has a need for this specific requirement?
-      placeholder: "example: Financial Controller."
+      label: Actor
+      description: "The external person, system, or trigger that provides input or receives the output of this requirement."
+      placeholder: "examples: KAM Manager | Financial Controller | System Notification | ServiceBus Message"
     validations:
       required: true
 
-  - type: input
-    id: objective
+  - type: markdown
     attributes:
-      label: Objective (I want to)
-      description: What is the overall goal of this specific requirement?
-      placeholder: "example: Add a chart with spending by category."
-    validations:
-      required: true
-
-  - type: input
-    id: value
-    attributes:
-      label: Value (so that)
-      description: Why does this requirement have value?
-      placeholder: "example: Saves one hour each month manually creating the chart."
-    validations:
-      required: true
-
+      value: |
+        > [!TIP]
+        > The actor specifies a role played by a _user_ or any other _system_ that interacts with the objective of this requirement.
+        > Actors are _external_ to the requirement, but interact with it directly by _providing input_ to it, and/or _receive outputs_ from it.
+        > An actor is not necessarily a physical entity, for example, it may be a _trigger_ or another type of _event_.
+      
   - type: textarea
     id: context
     attributes:
       label: Context
-      description: Describe the <b>context</b> or <b>background information</b> that will help to explain this requirement.
-  
+      description: Provide an optional **context** and list any **preconditions** relevant to the implementation of this requirement.
+
+  - type: markdown
+    attributes:
+      value: |
+        > [!TIP]
+        > The context of the requirement provides background information:
+        >     - Why is the requirement important or which particular need has resulted in this requirement,
+        >     - List any distinct _preconditions_, that is, the state that must exist before this requirement is triggered.
+        
   - type: textarea
     id: requirements-functional
     attributes:
-      label: Functional Requirements (Acceptance criteria)
-      description: List the functional requirements and their MoSCoW classification.
-      value: |
-        - [ ] List any functional prerequisites, for example using a link: tce-dip/tce-dip-connectors-template#30.
-        - [ ] List the functional requirements (Acceptance criteria).
+      label: Functional Requirements
+      description: List the _functional_ requirements and their **MoSCoW** classification.
+      placeholder: |
+        - [ ] List any functional prerequisites, for example using a link to another requirement.
+        - [ ] List the functional requirements that <i>must, should, could, or would</i> be implemented.
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        > [!TIP]
+        > The functional requirements (FR's) comprise everything that is expected for this requirement to _function_ properly:
+        >     - List the _exact_ and _detailed_ expectations of the functional implementation of this requirement.
+        >     - All functional requirements must be _verifyable_ (can it be tested or confirmed?).
+        >     - Use the MoSCow classification to indicate priority, provide focus, or allow some interpretation.
+        >     - Anything not listed here is _not_ considered part of this requirement and _should_ not be implemented. 
 
   - type: textarea
     id: requirements-non-functional
     attributes:
-      label: Non-Functional Requirements (Acceptance criteria)
-      description: List the non-functional requirements and their MoSCoW classification.
+      label: Non-Functional Requirements
+      description: List the _non-functional_ requirements and their **MoSCoW** classification.
       value: |
-        - [ ] List any non-functional prerequisites, for example using a link: tce-dip/tce-dip-connectors-template#30.
-        - [ ] Readme and other documentation updated.
-        - [ ] Deployment scheduled or carried out.
+        - [ ] The README file and other (code-) documentation sources _must_ be updated.
+        - [ ] All (unit-) tests _must_ pass and failures _should_ be documented as defects or requirements.
+        - [ ] All related [Pull Requests](../pulls) _must_ be reviewed, approved, and merged.
+        - [ ] The (production-) deployment _should_ be scheduled.
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        > [!TIP]
+        > The non-functional requirements (NFR's) comprise all expectations which do _not_ contribute to this requirement _functioning_ properly:
+        >     - List the _exact_ and _detailed_ expectations of the non-functional implementation of this requirement.
+        >     - Most non-functional requirements are _verifyable_ (can it be tested or confirmed?), but may not be.
+        >     - Use the MoSCow classification to indicate priority, provide focus, or allow some interpretation.
+        >     - This list is complemented by processes (Change and Release), standards (Coding Standards), and procedures (ISO).
+
+  - type: textarea
+    id: implementation-steps
+    attributes:
+      label: Implementation Steps
+      description: List the steps required and optionally the assignees, in their preferred order, to implement this requirement.
+      placeholder: |
+        - [ ] Step 1 (optional @assignee)
+        - [ ] Step 2 (optional @assignee)
+        - [ ] Step 3 (optional @assignee)
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        > [!TIP]
+        > The implementation steps define the path to implementing the requirement and should be output of the refinement session(s).
+        > The steps should directly reflect the functional- and non-functional requirements. No more, no less.
+        > The steps may optionally be assigned an assignee.
+
+  - type: markdown
+    attributes:
+      value: |
+        > [!Warning]
+        > You may be tempted to create sub-issues 'Task', but try to resist this:
+        > 1. A task is by definition not a requirement or part of a requirement.
+        > 2. You probably need a prerequisite _requirement_ instead of a task.
+        > 2. A 'Task' issue type comes with quality demands!
+
+  - type: markdown
+    attributes:
+      value: |
+        > [!Note]
+        > Additional tags, such as the status and the workorder, can be added from the Project page after the requirement has been created.

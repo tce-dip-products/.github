@@ -1,0 +1,62 @@
+name: Deployment
+type: deployment
+description: "A product deployment to a downstream environment."
+title: "Deploy <Product Name> [v1.x.x] to [DLZnn] <TST|ACC|PRD>"
+projects: ["tce-dip/2","tce-dip-products/2"]
+body:
+
+  - type: markdown
+    attributes:
+      value: |
+        > [!TIP]
+        > The _title_ must contain the product name, optionally the version and data landing zone, and the target environment(s).
+        >
+        > Examples:
+        >    - Deploy KPN Dashboard latest to DLZ07 PRD
+        >    - Deploy HR2Day Connector v1.8.481 DLZ01 PRD
+        >    - Deploy 4PS Connector main to DLZ02/DLZ04/DLZ06 ACC
+
+  - type: input
+    id: approver
+    attributes:
+      label: Approver
+      description: "Provide the name of the approver for production deployments."
+      placeholder: "@approver"
+    validations:
+      required: false
+
+  - type: textarea
+    id: target-resources
+    attributes:
+      label: Target Resources
+      description: List the resources or workspaces to which the product must be deployed.
+      placeholder: |
+        - [ ] app-tce-dip-dlz99-dp03-cn01-tst (optional 'Before week 12')
+        - [ ] app-tce-dip-dlz99-dp03-cn01-acc (optional 'On or before monday 2025-06-16')
+        - [ ] app-tce-dip-dlz99-dp03-cn01-prd (optional yyyy-MM-dd HH:mm - HH:mm of deployment slot)
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: List dependencies and additional deployments that this deployment depends on.
+      placeholder: |
+        - [ ] Link to PR or Requirement that must be included in this deployment
+        - [ ] Link to deployment ProductName v1.x.x
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Information
+      description: List any additional information, such as links to release notes.
+      placeholder: |
+        This deployment upgrades ProductName from v1.0 to v1.3:
+        - Link to Release Notes v1.1
+        - Link to Release Notes v1.2
+        - Link to Release Notes v1.3
+    validations:
+      required: false
