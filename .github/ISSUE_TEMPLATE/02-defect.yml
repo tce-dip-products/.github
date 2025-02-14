@@ -9,16 +9,17 @@ body:
     id: repro-steps
     attributes:
       label: Steps to Reproduce
-      value: |
-        1. Describe the steps
-        2. that lead to
-        3. reproducing the defect.
+      placeholder: |
+        1. Describe the steps that lead to
+        2. reproducing or observing the defect.
+    validations:
+      required: true
 
   - type: dropdown
     id: severity
     attributes:
       label: Severity
-      description: Provide an indication of the severity of this defect.
+      description: Provide an indication of the severity of this defect after triage.
       multiple: false
       options:
         - Trivial
@@ -49,7 +50,11 @@ body:
     attributes:
       label: System Info
       description: Paste the relevant system information from the logs. This will be automatically formatted into code.
-      render: shell
+      render: json
+      placeholder: |
+        "{"
+        "    ..."
+        "}"
     validations:
       required: true
 

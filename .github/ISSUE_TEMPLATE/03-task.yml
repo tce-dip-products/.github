@@ -10,15 +10,34 @@ body:
     attributes:
       label: Objective
       description: "The overall objective of this task in a single sentence."
-      placeholder: "example: Compare solution 1 to solution 2 in order to make an educated decision on their suitability."
+      placeholder: "example: Compare option 1 to option 2 in order to make an educated decision on their suitability."
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        > [!TIP]
+        > The objective is a _single_, _complete_ and _unambiguous_ sentence that describes the desired _end-state_ of this task.
+        > It includes a subject and a predicate with an object. Keep the following in mind when composing the objective:
+        >     - Is it a complete and unambiguous sentence?
+        >     - Is it not in conflict with any other tasks?
+        >     - Is it an atomic (single unit) of work?
+        >     - Is it feasible within a single iteration?
+        >     - It it valuable or considered busywork?
 
   - type: textarea
     id: context
     attributes:
       label: Context
       description: Provide an optional **context** relevant to the completion of this task.
+
+  - type: markdown
+    attributes:
+      value: |
+        > [!TIP]
+        > The context of the task provides background information:
+        >     - Why is the task important or which particular question or need has resulted in this task,
 
   - type: textarea
     id: desired-outcome
@@ -31,6 +50,15 @@ body:
     validations:
       required: true
 
+  - type: markdown
+    attributes:
+      value: |
+        > [!TIP]
+        > The desired outcomes comprise all expectations of this task:
+        >     - List the _exact_ and _detailed_ expectations of this task.
+        >     - Most desired outcomes should be _verifyable_, but may not be.
+        >     - Use the MoSCow classification to indicate priority, provide focus, or allow some interpretation.
+
   - type: textarea
     id: completion-steps
     attributes:
@@ -41,4 +69,12 @@ body:
         - [ ] Step 2 (optional @assignee)
         - [ ] Step 3 (optional @assignee)
     validations:
-      required: true
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        > [!TIP]
+        > The completion steps define the path to executing the task and should be output of the refinement session(s).
+        > The steps should directly reflect the desired outcomes. No more, no less.
+        > The steps may optionally be assigned an assignee.

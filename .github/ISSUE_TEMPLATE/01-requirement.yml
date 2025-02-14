@@ -107,13 +107,13 @@ body:
     id: implementation-steps
     attributes:
       label: Implementation Steps
-      description: List the steps required, in their preferred order, to implement this requirement.
+      description: List the steps required and optionally the assignees, in their preferred order, to implement this requirement.
       placeholder: |
         - [ ] Step 1 (optional @assignee)
         - [ ] Step 2 (optional @assignee)
         - [ ] Step 3 (optional @assignee)
     validations:
-      required: true
+      required: false
 
   - type: markdown
     attributes:
@@ -121,6 +121,7 @@ body:
         > [!TIP]
         > The implementation steps define the path to implementing the requirement and should be output of the refinement session(s).
         > The steps should directly reflect the functional- and non-functional requirements. No more, no less.
+        > The steps may optionally be assigned an assignee.
 
   - type: markdown
     attributes:
