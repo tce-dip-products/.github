@@ -34,7 +34,7 @@ body:
       value: |
         > [!TIP]
         > The context of the task provides background information:
-        >     - Why is the task important or which particular question or need has resulted in this task,
+        >     - Why is the task important or which particular question or need has resulted in this task.
 
   - type: textarea
     id: desired-outcome
