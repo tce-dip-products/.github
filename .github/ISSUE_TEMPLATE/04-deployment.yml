@@ -1,28 +1,15 @@
 name: Deployment
 type: deployment
 description: A product deployment to a downstream environment.
-title: "Deploy <Product Name> [v1.x.x] to <TST|ACC|PRD>"
+title: "Deploy <Product Name> [v1.x.x] to [DLZnn] <TST|ACC|PRD>"
 projects: ["tce-dip/2","tce-dip-products/2"]
 body:
 
-  - type: input
-    id: product
+  - type: markdown
     attributes:
-      label: Product and Version
-      description: "The product and an optional version that should be deployed."
-      placeholder: "KPN Dashboard latest | HR2Day Connector v1.8.481 | 4PS Connector main"
-    validations:
-      required: true
-
-  - type: checkboxes
-    id: target-environments
-    attributes:
-      label: Target Environments
-      description: Select the environment(s) to which the product should be deployed.
-      options:
-        - label: TST
-        - label: ACC
-        - label: PRD
+      value: |
+        > [!TIP]
+        > The _title_ must contain the product name, optionally the version and data landing zone, and the target environment(s).
 
   - type: input
     id: approver
