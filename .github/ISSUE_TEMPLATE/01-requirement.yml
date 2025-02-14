@@ -40,18 +40,7 @@ body:
         > The actor specifies a role played by a _user_ or any other _system_ that interacts with the objective of this requirement.
         > Actors are _external_ to the requirement, but interact with it directly by _providing input_ to it, and/or _receive outputs_ from it.
         > An actor is not necessarily a physical entity, for example, it may be a _trigger_ or another type of _event_.
-
-  - type: input
-    id: objective
-    attributes:
-      label: Objective
-      description: ""
-      placeholder: "example: The first tab in the report must display a chart that depicts spending by category."
-    validations:
-      required: true
-
-
-        
+      
   - type: textarea
     id: context
     attributes:
