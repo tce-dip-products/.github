@@ -132,4 +132,4 @@ body:
     attributes:
       value: |
         > [!Note]
-        > Additional tags, such as 'Product' and 'Company' can be added from the Project page after the requirement has been created.
+        > Additional tags, such as the status and the workorder, can be added from the Project page after the requirement has been created.
