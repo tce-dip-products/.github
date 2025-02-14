@@ -1,7 +1,7 @@
 name: Defect
 type: defect
 description: Submit functionality that does not comply with one or more requirements.
-title: "Short description of the defect (do NOT add prefixes such as 'System | CODE' | ...)"
+title: "Description of the defect (do NOT add prefixes such as 'System | CODE' | ...)"
 projects: ["tce-dip/2","tce-dip-products/2"]
 body:
 

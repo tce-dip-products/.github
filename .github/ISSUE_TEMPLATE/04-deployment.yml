@@ -10,6 +10,11 @@ body:
       value: |
         > [!TIP]
         > The _title_ must contain the product name, optionally the version and data landing zone, and the target environment(s).
+        >
+        > Examples:
+        >    - Deploy KPN Dashboard latest to DLZ07 PRD
+        >    - Deploy HR2Day Connector v1.8.481 DLZ01 PRD
+        >    - Deploy 4PS Connector main to DLZ02/DLZ04/DLZ06 ACC
 
   - type: input
     id: approver

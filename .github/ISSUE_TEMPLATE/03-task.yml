@@ -1,30 +1,27 @@
 name: Task
 type: task
 description: A specific task that should be executed which is not a requirement.
-title: "Short objective of the Task (do NOT add prefixes such as 'System | CODE' | ...)"
+title: "Objective of the Task (do NOT add prefixes such as 'System | CODE' | ...)"
 projects: ["tce-dip/2","tce-dip-products/2"]
 body:
-
-  - type: input
-    id: objective
-    attributes:
-      label: Objective
-      description: "The overall objective of this task in a single sentence."
-      placeholder: "example: Compare option 1 to option 2 in order to make an educated decision on their suitability."
-    validations:
-      required: true
 
   - type: markdown
     attributes:
       value: |
         > [!TIP]
         > The objective is a _single_, _complete_ and _unambiguous_ sentence that describes the desired _end-state_ of this task.
-        > It includes a subject and a predicate with an object. Keep the following in mind when composing the objective:
-        >     - Is it a complete and unambiguous sentence?
-        >     - Is it not in conflict with any other tasks?
-        >     - Is it an atomic (single unit) of work?
-        >     - Is it feasible within a single iteration?
-        >     - It it valuable or considered busywork?
+        > It includes a subject and a predicate with an object.
+        >
+        > Examples:
+        >    - Compare option 1 to option 2 in order to decide their suitability.
+        >    - Estimate the effort for Phase 1 of the Xyz Dashboard requirements
+        >
+        > Keep the following in mind when composing the objective:
+        >    - Is it a complete and unambiguous sentence?
+        >    - Is it not in conflict with any other tasks?
+        >    - Is it an atomic (single unit) of work?
+        >    - Is it feasible within a single iteration?
+        >    - It it valuable or considered busywork?
 
   - type: textarea
     id: context
