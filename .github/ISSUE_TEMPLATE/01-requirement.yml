@@ -128,14 +128,12 @@ body:
       value: |
         > [!Warning]
         > You may be tempted to create sub-issues 'Task', but try to resist this:
-        > 1. You probably need a prerequisite requirement.
+        > 1. A task is by definition not a requirement or part of a requirement.
+        > 2. You probably need a prerequisite _requirement_ instead of a task.
         > 2. A 'Task' issue type comes with quality demands!
 
   - type: markdown
     attributes:
       value: |
         > [!Note]
-        > For more information about the process, see the [documentation](https://fuzzy-goggles-j8o2698.pages.github.io/documentation/development/development-process.html).
-        > _(Note that this link opens in this window so you may lose your changes!)_
-        >
         > Additional tags, such as 'Product' and 'Company' can be added from the Project page after the requirement has been created.
