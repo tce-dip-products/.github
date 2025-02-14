@@ -82,7 +82,6 @@ body:
       label: Non-Functional Requirements
       description: List the _non-functional_ requirements and their **MoSCoW** classification.
       value: |
-        - [ ] ...
         - [ ] The README file and other (code-) documentation sources _must_ be updated.
         - [ ] All (unit-) tests _must_ pass and failures _should_ be documented as defects or requirements.
         - [ ] All related [Pull Requests](../pulls) _must_ be reviewed, approved, and merged.
