@@ -2,7 +2,6 @@
 Provide a short summary in the Title above. Examples of good PR titles:
 * "Feature: add models a, b, c"
 * "Fix: deduplicate a"
-* "Update: dbt version"
 -->
 
 ## What type of PR is this? (check all applicable)
@@ -39,7 +38,6 @@ addressed, and remove any items that are not relevant to this PR.
 - [ ] My pull request represents one logical piece of work.
 - [ ] I have materialized my models appropriately.
 - [ ] I have added appropriate tests and documentation to any new models.
-- [ ] I have updated the README file.
 
 ## Added/updated tests?
 
