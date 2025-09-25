@@ -85,6 +85,7 @@ body:
         - [ ] The README file and other (code-) documentation sources _must_ be updated.
         - [ ] All (unit-) tests _must_ pass and failures _should_ be documented as defects or requirements.
         - [ ] All related [Pull Requests](../pulls) _must_ be reviewed, approved, and merged.
+        - [ ] All relevant templates have been updated (terraform, data product templates, etc.).
         - [ ] The (production-) deployment _should_ be scheduled.
     validations:
       required: true
