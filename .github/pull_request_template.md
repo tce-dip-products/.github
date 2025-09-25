@@ -4,4 +4,5 @@ Please select the relevant template based on the project you're working on. Use 
 
 - **[dbt](?expand=1&template=dbt.md)**
 - **[Databricks](?expand=1&template=databricks.md)**
+- **[PowerBI](?expand=1&template=powerbi.md)**
 - **[mdBook](?expand=1&template=mdbook.md)**
