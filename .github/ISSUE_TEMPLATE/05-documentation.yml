@@ -36,10 +36,10 @@ body:
       description: Where should this documentation be created or updated?
       multiple: false
       options:
-        - Code
-        - Model
-        - Portal
-        - Repo
+        - Code Comments
+        - Data Dictionary
+        - Platform Portal
+        - Repository
     validations:
       required: true
 
