@@ -1,10 +1,10 @@
-## What issues does this PR relate to?
+## Related Issues
 <!--- If you want to close the issue after this PR, list here: -->
 Resolves # 
 <!--- If you don't want to close the issue after this PR, list here: -->
 Addresses #
 
-## Quality control checklist
+## Quality Control
 <!-- Ensure this PR does not introduce any code-quality issues: -->
 - [ ] Checked all committed code is free of warnings and errors
 <!-- Ensure you have added comments to any complex constructs within your code that need further explanation: -->
